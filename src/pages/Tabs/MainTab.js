@@ -11,7 +11,7 @@ import Busca from '../Busca';
 import Favoritos from '../Favoritos';
 import Chat from '../Chat';
 
-import {View, StyleSheet} from 'react-native'
+import {View, StyleSheet, TouchableOpacity} from 'react-native'
 
 const Tab = createBottomTabNavigator();
 
@@ -47,7 +47,8 @@ return (
 		tabBarOptions={{
 		activeTintColor: '#74b9ff',
         inactiveTintColor: '#777',
-        showLabel: false,
+        activeBackgroundColor: '#fff',
+        inactiveBackgroundColor: '#fff',
     }}
     >
     <Tab.Screen name="Home" component={Home} />
@@ -57,7 +58,7 @@ return (
             tabBarIcon: () => (
                 <View>
                     <LinearGradient style={styles.iconTabRound} start={{ x: 0, y: 1 }} end={{ x: 0, y: 0 }} colors={['#74b9ff', '#218c74']}>
-                        <Icon name="search-off" size={26} color='#FFF'/>
+                        <Icon name="search" size={26} color='#FFF'/>
                     </LinearGradient>
                 </View>
             ),
